@@ -1,1 +1,4 @@
-Written data structure and algorithms using C programming.
+# Data Structure And Algorithms Notes.
+
+## Contains (task that have been completed or studied):
+
