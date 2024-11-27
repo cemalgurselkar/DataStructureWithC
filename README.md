@@ -18,7 +18,9 @@ The following data structures and algorithms are included in this repository:
 - **Sorting Algorithms**
   - Bubble Sort
   - Selection Sort
-  - Quick Sort
+  - Quick Sor
+t
+
   - Merge Sort
 - **Searching Algorithms**
   - Linear Search
@@ -33,3 +35,11 @@ To compile and run a specific file, you can use the GCC compiler. Below are the 
 
    ```bash
    gcc -o output_file_name source_file.c
+
+    ```bash
+    gcc -o main bubbleSort.c
+    ./main
+    
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
