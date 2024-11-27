@@ -2,32 +2,28 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Definition of the List
 typedef struct linkedlist {
-    int info;                 // Integer value
-    char message[50];         // String data
-    struct linkedlist *next;  // Pointer to the next element
+    int info;
+    char message[50];
+    struct linkedlist *next;
 } simple_list;
 
-// Initially, the list is empty
 simple_list *first = NULL;
 simple_list *last = NULL;
 
-// Function to insert a new node
 int insert(simple_list *p) {
     if (first != NULL) {
-        last->next = p;  // Link the current last node to the new node
-        p->next = NULL;  // Set the new node's next pointer to NULL
-        last = p;        // Update the last pointer
+        last->next = p;
+        p->next = NULL;
+        last = p;
     } else {
-        first = p;       // If the list is empty, the new node becomes the first
-        last = p;        // and also the last
-        p->next = NULL;  // Set the next pointer to NULL
+        first = p;
+        last = p;
+        p->next = NULL;  
     }
     return 0;
 }
 
-// Function to display the list
 int displayList() {
     simple_list *p;
     p = first;
@@ -37,31 +33,27 @@ int displayList() {
     }
     while (p != NULL) {
         printf("Info: %d, Message: %s\n", p->info, p->message);
-        p = p->next;  // Move to the next node
+        p = p->next;
     }
     return 0;
 }
 
-// Function to search an element by its key
 simple_list *search(int key) {
     simple_list *p;
     p = first;
     while (p) {
         if (p->info == key) {
-            return p;  // Return the found node
+            return p;
         }
         p = p->next;
     }
-    return NULL;  // Return NULL if not found
+    return NULL;
 }
 
-// Function to delete an element by its key
-simple_list *deleteNode(int key) {
+simple_list *deleteNode(int key){
     simple_list *p, *previous;
     p = first;
     previous = NULL;
-
-    // Search for the element to be deleted
     while (p) {
         if (key == p->info) {
             break;
@@ -72,30 +64,26 @@ simple_list *deleteNode(int key) {
 
     if (p != NULL) {
         if (previous == NULL) {
-            // If the first element will be deleted
             if (first == last) {
-                // If list has one element
                 first = NULL;
                 last = NULL;
             } else {
                 first = first->next;
             }
         } else {
-            // Delete from middle or last
             previous->next = p->next;
             if (previous->next == NULL) {
-                // Last element is deleted
                 last = previous;
             }
         }
-        free(p);  // Free the memory of the deleted node
+        free(p);
         return p;
     } else {
         return NULL;
     }
 }
 
-int main() {
+int main(){
     int choice, key;
     char message[50];
     simple_list *newNode, *foundNode;
@@ -112,7 +100,6 @@ int main() {
 
         switch (choice) {
             case 1:
-                // Insert
                 newNode = (simple_list *)malloc(sizeof(simple_list));
                 if (!newNode) {
                     printf("Memory allocation failed!\n");
@@ -121,20 +108,18 @@ int main() {
                 printf("Enter info (integer): ");
                 scanf("%d", &newNode->info);
                 printf("Enter message: ");
-                getchar(); // To consume newline character
+                getchar();
                 fgets(newNode->message, sizeof(newNode->message), stdin);
-                newNode->message[strcspn(newNode->message, "\n")] = '\0'; // Remove newline
+                newNode->message[strcspn(newNode->message, "\n")] = '\0';
                 insert(newNode);
                 printf("Node inserted successfully.\n");
                 break;
 
             case 2:
-                // Display
                 displayList();
                 break;
 
             case 3:
-                // Search
                 printf("Enter the key to search: ");
                 scanf("%d", &key);
                 foundNode = search(key);
@@ -146,7 +131,6 @@ int main() {
                 break;
 
             case 4:
-                // Delete
                 printf("Enter the key to delete: ");
                 scanf("%d", &key);
                 if (deleteNode(key)) {
@@ -157,7 +141,6 @@ int main() {
                 break;
 
             case 5:
-                // Exit
                 printf("Exiting...\n");
                 return 0;
 
@@ -165,6 +148,5 @@ int main() {
                 printf("Invalid choice! Try again.\n");
         }
     }
-
     return 0;
 }

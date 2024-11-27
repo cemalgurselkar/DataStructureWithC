@@ -1,15 +1,35 @@
-# Data Structure And Algorithms Notes.
+# Data Structures with C
 
-## Contains (task that have been completed or studied):
+This repository contains implementations of various data structures and algorithms in the C programming language. Each algorithm is implemented in a separate `.c` file named after the corresponding algorithm.
 
-- Sorting Algorithms is finished.
-- Searching Algorithms is finished.
-- HashTable Function is finished.
+## Contents
 
+The following data structures and algorithms are included in this repository:
 
-+ How to works the .c files:
-+ Example:
-"""
-gcc -o bubble bubbleSort.c
-./bubble
-"""
+- **Linked List**
+  - Singly Linked List
+  - Doubly Linked List
+- **Stack**
+  - Array-based Stack
+  - Linked List-based Stack
+- **Queue**
+  - Array-based Queue
+  - Circular Queue
+- **Sorting Algorithms**
+  - Bubble Sort
+  - Selection Sort
+  - Quick Sort
+  - Merge Sort
+- **Searching Algorithms**
+  - Linear Search
+  - Binary Search
+
+## How to Compile and Run
+
+To compile and run a specific file, you can use the GCC compiler. Below are the steps:
+
+1. Open a terminal and navigate to the directory containing the `.c` file you want to compile.
+2. Run the following command to compile the file:
+
+   ```bash
+   gcc -o output_file_name source_file.c
