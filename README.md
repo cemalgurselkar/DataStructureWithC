@@ -36,10 +36,12 @@ To compile and run a specific file, you can use the GCC compiler. Below are the 
    ```bash
    gcc -o output_file_name source_file.c
 
+3. Example run a .c file:
     ```bash
     gcc -o main bubbleSort.c
     ./main
-    
+
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
