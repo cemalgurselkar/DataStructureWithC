@@ -31,16 +31,16 @@ t
 To compile and run a specific file, you can use the GCC compiler. Below are the steps:
 
 1. Open a terminal and navigate to the directory containing the `.c` file you want to compile.
-2. Run the following command to compile the file:
 
-   ```bash
-   gcc -o output_file_name source_file.c
-
-3. Example run a .c file:
-    ```bash
-    gcc -o main bubbleSort.c
-    ./main
-
+```bash
+  #How to run a .c file:
+  gcc -o main main.c # Create a .exe file of main.c 
+  ./main #run the .exe file (.exe = executive)
+  
+  # For example:
+  gcc -o main bubbleSort.c
+  ./main # Run bubbleSort.c file
+```
 
 ## License
 
