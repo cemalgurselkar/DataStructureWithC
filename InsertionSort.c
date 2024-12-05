@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-// İnsertion sort algoritmasının mantığı şu şekilde!!
-
 void insertionSort(int arr[], int n){
     int i,k,key;
     for (i=1;i<n;i++){
