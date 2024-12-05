@@ -15,16 +15,16 @@ int hash2(char *key, int tableSize){
 }
 
 int hash3(char *key, int tableSize){
-    int hashVal = 0;
+    int hashval = 0;
     int i;
     for (i=0;key[i]!='\0';i++){
-        hashVal = hashVal + key[i] * pow(37,i);
+        hashval = hashval + key[i] * pow(37,i);
     }
-    hashVal = hashVal % tableSize;
-    if (hashVal < 0){
-        hashVal += tableSize;
+    hashval = hashval % tableSize;
+    if (hashval < 0){
+        hashval += tableSize;
     }
-    return hashVal;
+    return hashval;
 }
 
 int main() {

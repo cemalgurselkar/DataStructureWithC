@@ -3,7 +3,7 @@
 void bubbleSort(int arr[], int n){
     int temp, move, k;
     for (move=0;move<(n-1);move++){
-        for(k=0;k<(n-1);k++){
+        for(k=0;k<(n-1-move);k++){
             if (arr[k]>arr[k+1]){
                 temp = arr[k];
                 arr[k] = arr[k+1];
