@@ -59,7 +59,6 @@ tree *delete(tree *treeRoot, int item){
     q = treeRoot;
     qa = NULL;
     //find the item to be deleted
-
     while ((q != NULL) && (q->info != item)){
         qa = q;
         if (item < q->info){
@@ -71,7 +70,6 @@ tree *delete(tree *treeRoot, int item){
         printf("Item to be deleted is not found!!\n");
         return NULL;
     }
-
     //if q is found and it has 2 children
     if ((q->left != NULL) && (q->right != NULL)){
         s = q->left;
@@ -88,7 +86,6 @@ tree *delete(tree *treeRoot, int item){
         q = s;
         qa = sa;
     }
-
     //noew q has at most 1 child, and find it
     if ((q->left != NULL)){
         qc = q->left;

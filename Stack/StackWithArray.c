@@ -49,7 +49,7 @@ int main(){
     while ((c = getchar()) != '\n'){
         push(c);
     }
-
+    printf("The stack is here: \n");
     while (sp > 0){
         printf("%c",pop());
     }
