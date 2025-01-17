@@ -42,7 +42,7 @@ void traverse(tree *treeRoot){
 }
 
 tree *search(tree *treeRoot, int item){
-    while ((treeRoot != NULL) && (treeRoot->info) != item){
+    while ((treeRoot != NULL) && (treeRoot->info != item)){
         if (item < treeRoot->info){
             treeRoot = treeRoot->left;
         }
